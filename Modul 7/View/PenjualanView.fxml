@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.PenjualanController">
+
+    <top>
+        <GridPane hgap="10" vgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+
+            <Label text="Pelanggan"/>
+            <ComboBox fx:id="cbPelanggan" GridPane.columnIndex="1"/>
+
+            <Label text="Buku" GridPane.rowIndex="1"/>
+            <ComboBox fx:id="cbBuku" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Jumlah" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtJumlah" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Total" GridPane.rowIndex="3"/>
+            <Label fx:id="lblTotal" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                <Button text="Tambah" onAction="#handleTambah"/>
+                <Button text="Update" onAction="#handleUpdate"/>
+                <Button text="Hapus" onAction="#handleHapus"/>
+            </HBox>
+
+        </GridPane>
+    </top>
+
+    <center>
+        <TableView fx:id="tablePenjualan">
+            <columns>
+                <TableColumn fx:id="colId" text="ID"/>
+                <TableColumn fx:id="colPelanggan" text="Pelanggan ID"/>
+                <TableColumn fx:id="colBuku" text="Buku ID"/>
+                <TableColumn fx:id="colJumlah" text="Jumlah"/>
+                <TableColumn fx:id="colTotal" text="Total"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>

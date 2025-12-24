@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.geometry.Insets?>
+
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml">
+
+    <tabs>
+        <Tab text="Pelanggan">
+            <content>
+                <fx:include source="PelangganView.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="Buku">
+            <content>
+                <fx:include source="BukuView.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="Penjualan">
+            <content>
+                <fx:include source="PenjualanView.fxml"/>
+            </content>
+        </Tab>
+    </tabs>
+
+</TabPane>

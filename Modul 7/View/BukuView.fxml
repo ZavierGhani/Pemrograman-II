@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.BukuController">
+
+    <top>
+        <GridPane hgap="10" vgap="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+            <Label text="Judul"/>
+            <TextField fx:id="txtJudul" GridPane.columnIndex="1"/>
+
+            <Label text="Penulis" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtPenulis" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Harga" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtHarga" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Stok" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtStok" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+                <Button text="Tambah" onAction="#handleTambah"/>
+                <Button text="Update" onAction="#handleUpdate"/>
+                <Button text="Hapus" onAction="#handleHapus"/>
+            </HBox>
+        </GridPane>
+    </top>
+
+    <center>
+        <TableView fx:id="tableBuku">
+            <columns>
+                <TableColumn fx:id="colId" text="ID"/>
+                <TableColumn fx:id="colJudul" text="Judul"/>
+                <TableColumn fx:id="colPenulis" text="Penulis"/>
+                <TableColumn fx:id="colHarga" text="Harga"/>
+                <TableColumn fx:id="colStok" text="Stok"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
