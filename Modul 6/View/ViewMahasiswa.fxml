@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.MahasiswaController">
+
+    <center>
+        <TableView fx:id="tableMahasiswa">
+            <columns>
+                <TableColumn fx:id="colNim" text="NIM" prefWidth="150"/>
+                <TableColumn fx:id="colNama" text="Nama" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
